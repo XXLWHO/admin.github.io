@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,   maximum-scale=1.0,    user-scalable=no">
+    <title>后台管理</title>
+    <link rel="stylesheet" href="../css/show.css">
+    <link rel="stylesheet" href="../css/base.css">
+</head>
+<body>
+    <!-- <header>
+        <nav></nav>
+    </header> -->
+    <aside class="slider" id="slider"> 
+        <div class="slider-title"> 后台管理
+        <button class="menu" onclick="showMenu()">|||</button>
+        </div>
+        <ul class="slider-ul" id ="slider-ul">
+            <li onclick="changeTab(0)">上传文章</li>
+            <li onclick="changeTab(1)">大病求助</li>
+            <li onclick="changeTab(2)">寻人启事</li>
+            <li onclick="changeTab(3)">分享文章</li>
+        </ul>
+    </aside>
+ 
+    
+    <article  class="main-box" id = "main-box">  
+        <div class="head">
+        </div> 
+        <div>
+        <div class="main" id="table0">
+            <form action="" id = "upform">
+                <table class="main-table" cellspacing="0" cellpadding="0">
+                    <thead class="main-table-head">
+                        <tr class="main-table-head" >
+                            <td>上传文章</td>
+                        </tr>
+                        
+                    </thead>
+                    <tbody class="main-body">
+                        <tr>
+                            <td>
+                                <label for="select" style="color: rgb(119, 119, 119);"> 文章类型:</label>
+                                <select name="type" id="select" class="i-box">
+                                    <optgroup label="首页文章">
+                                        <option value="1">自然灾害</option>
+                                        <option value="2">心理教育</option>
+                                        <option value="3">疫情防控</option>
+                                        <option value="4">电信诈骗</option>
+                                    </optgroup>
+                                    <optgroup label="案例新闻">
+                                        <option value="5">自然灾害</option>
+                                        <option value="6">心理教育</option>
+                                        <option value="7">疫情防控</option>
+                                        <option value="8">电信诈骗</option>
+                                    </optgroup>
+                                   
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="">文章标题:</label>
+                                <input type="text" class="i-box"  name ="tittle">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="">文章图片:</label>
+                                <input 
+                                name="image_url"
+                                type="file" class="i-box">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="">文章内容:</label>
+                                <textarea 
+                                name="content"
+                                style="resize: none;vertical-align: middle;font-size: 15px;"
+                                class="i-box"
+                                rows="15"
+                                >
+                                    
+                                </textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>
+                                <label for=""></label>
+                                <input type="button" value="提交"  style="margin: 0 2%;text-align: center;"   class="main-btn" onclick="upload()"
+                                >
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </form>
+        </div>
+        <div class="main" id="table1">
+            <form action="">
+                <table class="main-table" cellspacing="0" cellpadding="0">
+                    <thead class="main-table-head">
+                        <tr class="main-table-head" >
+                            <td>姓名</td>
+                            <td>身份证号</td>
+                            <td>联系电话</td>
+                            <td>查看详情</td>
+                        </tr>
+                    </thead>
+                    <tbody class="main-body"  id = "table1-body">
+                        <tr>
+                           
+                            <td >
+                                <input type="button" value="查看详情"  class="main-btn"/>
+                        </td>
+                        </tr>
+                        <tr>
+                           
+                            <td >
+                                <input type="button" value="查看详情"  class="main-btn"/>
+                        </td>
+                        </tr>
+                        <tr>
+                           
+                            <td >
+                                <input type="button" value="查看详情"  class="main-btn"/>
+                        </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+        <div class="main" id="table2">
+            <form action="">
+                <table class="main-table" cellspacing="0" cellpadding="0">
+                    <thead class="main-table-head">
+                        <tr class="main-table-head" >
+                            <td>姓名</td>
+                            <td>失散地点</td>
+                            <td>失散时间</td>
+                            <td>查看详情</td>
+                        </tr>
+                    </thead>
+                    <tbody class="main-body"  id = "table2-body">
+                    </tbody>
+                </table>
+            </form>
+        </div>
+        <div class="main" id="table3">
+            <form action="">
+                <table class="main-table" cellspacing="0" cellpadding="0">
+                    <thead class="main-table-head">
+                        <tr class="main-table-head" >
+                            <td>标题</td>
+                            <td>分类</td>
+                            <td>查看详情</td>
+                        </tr>
+                    </thead>
+                    <tbody class="main-body" id = "table3-body">
+                </table>
+            </form>
+        </div>
+    </div>
+    </article>
+    <div class="detail-box" id = "detail-box">
+        <div class="head">
+        </div>
+            <div class="content">
+                <div id="content-box">
+                </div>
+            </div>
+    </div>
+    </div>
+
+    </main>
+    <script src="../js/show.js"></script>
+</body>
+</html>

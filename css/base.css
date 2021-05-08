@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.f-a{
+    display: flex;
+    align-items: center;
+}
+.menu{
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    *{
+        font-size: 12px !important;
+        font-weight: 380 !important;
+    }
+    body{
+        display: block;
+    }
+    .slider,.slider-title{
+        height: 50px ;
+        line-height: 50px;
+    }
+    .menu{
+        display: unset;
+        outline: none;
+        border: 0;
+        color: #80DDB9;
+        width: 50px;
+        height: 50px;
+        transform: rotate(90deg);
+        position: absolute;
+        right: 0;
+        background-color: #3B3A40;
+    }
+    
+    .slider-ul{
+        display: none;
+    }
+    .slider,.main-box{
+        font-size: 13px;
+        width:100% !important;
+    }
+    .slider-ul li{
+        padding: 0 ;
+    }
+    .main-btn{
+        width: 100%;
+        padding: 4px 2px;
+    }
+}
