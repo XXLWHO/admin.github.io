@@ -55,6 +55,8 @@ body{
 }
 .main-box{
     width: 80%;
+    background-color: #F1F1F2;
+
 }
 .head{
     width: 100%;
@@ -66,8 +68,7 @@ body{
 }
 .main{
     box-sizing: border-box;
-    padding: 5% 2%;
-    background-color: #F1F1F2;
+    padding: 2% 2%;
     color: #3B3A40;
     display: none;
 }
@@ -85,11 +86,15 @@ body{
 .main-table-head{
     background-color: #4D4C50;
     color: #fff;
+    height: 80px;
     padding: 10px;
     box-sizing: content-box;
 }
 .main-body tr td{
-    border: 0.5px solid #F1F1F2;
+    border: 0.1px solid #F1F1F2;
+}
+#table0 tr td{
+    border: 0;
 }
 .main-btn{
     width: 60%;

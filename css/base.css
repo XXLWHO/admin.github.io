@@ -49,4 +49,7 @@
         width: 100%;
         padding: 4px 2px;
     }
+    .main-table-head{
+        height: 30px;
+    }
 }
