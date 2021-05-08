@@ -1,5 +1,4 @@
 window.onload =function(){
-
 };
 var url = "https://applets.cwp.cool";
 function login(){
@@ -24,3 +23,4 @@ function login(){
     };
     xml.send(`admin_id=${admin_id}&password=${password}`);
 };
+

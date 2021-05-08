@@ -69,10 +69,10 @@ function getData(get_url, method = "GET", form = null, callback = null) {
             }
         }
     };
-    xml.timeout = 2000;
-    xml.ontimeout =function(){
-        alert("请检查您的网络状态！")
-    }
+    // xml.timeout = 2000;
+    // xml.ontimeout =function(){
+    //     alert("请检查您的网络状态！")
+    // }
     xml.send(form);
 };
 // 大病求助
