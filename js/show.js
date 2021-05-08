@@ -50,7 +50,7 @@ function upload(){
 function getData(get_url, method = "GET", form = null, callback = null) {
     var xml = new XMLHttpRequest();
     xml.open(method, url + get_url);
-    if(method === "POST"){
+    if(method === "POST" && get_url !== "/api/admin/upload"){
         xml.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
     }
     xml.onreadystatechange = function () {
@@ -60,7 +60,6 @@ function getData(get_url, method = "GET", form = null, callback = null) {
                     code,
                     data
                 } = JSON.parse(xml.responseText);
-                // console.log(code);
                 if (code == 200) {
                     callback(data)
                 }else{
@@ -69,10 +68,10 @@ function getData(get_url, method = "GET", form = null, callback = null) {
             }
         }
     };
-    // xml.timeout = 2000;
-    // xml.ontimeout =function(){
-    //     alert("请检查您的网络状态！")
-    // }
+    xml.timeout = 2000;
+    xml.ontimeout =function(){
+        alert("请检查您的网络状态！")
+    }
     xml.send(form);
 };
 // 大病求助
@@ -80,9 +79,7 @@ function getHelp() {
     getData("/api/admin/helpshow", method = "GET", form = null, function (data) {
         let tbody = document.getElementById("table1-body");
         let str = ``;
-
         for (const i of data) {
-
             str +=
                 `
             <tr>
