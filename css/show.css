@@ -1,11 +1,10 @@
 body{
     display: flex;
-}
 
+}
 .slider {
     width: 20%;
-    height: 100vh;
-    min-height: 50px;
+    min-width: 300px;
     background-color: #3B3A40;
 }
 .slider-title {
@@ -56,7 +55,8 @@ body{
 .main-box{
     width: 80%;
     background-color: #F1F1F2;
-
+    box-sizing:border-box;
+    height: 1000px;
 }
 .head{
     width: 100%;

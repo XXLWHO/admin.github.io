@@ -13,8 +13,8 @@ function login(){
                 const  res = JSON.parse(xml.responseText);
                 if(res.code === 200){
                     alert("登录成功！")
+                    sessionStorage.setItem("token",res.data.token);
                     window.location ="show.html";
-                    sessionStorage.setItem("token",res.token);
                 }else{
                     alert("用户名或者密码错误!")
                 }

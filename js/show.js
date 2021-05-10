@@ -1,11 +1,20 @@
 window.onload = function () {
-    changeTab(0);
-    // 大病求助
-    getHelp();
-    // 寻人启事
-    getFind();
-    // 分享文章
-    getShare();
+    // token
+    let token = sessionStorage.getItem("token");
+    if(token){
+        changeTab(0);
+        // 大病求助
+        getHelp();
+        // 寻人启事
+        getFind();
+        // 分享文章
+        getShare();
+    }
+    else{
+        alert("请先登录！！！")
+        window.location = "login.html"
+    }
+    
 };
 var url = "https://applets.cwp.cool";
 function showMenu(){
